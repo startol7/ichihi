@@ -229,159 +229,69 @@
             font-weight: 500;
         }
 
-        /* SNSアイコンスタイル - 常に色付き */
+        /* SNSアイコンスタイル */
         .sns-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--primary-color);
             border-radius: 30px;
             transition: all 0.3s ease;
-            border: 2px solid;
+            border: 2px solid var(--primary-color);
             min-width: 180px;
             justify-content: center;
             font-weight: 500;
-            color: white;
         }
 
-        /* Instagram - グラデーション */
-        .sns-link.instagram-colored {
+        .sns-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* 各SNSのブランドカラー */
+        .sns-link.instagram:hover {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
             border-color: #e6683c;
         }
 
-        .sns-link.instagram-colored:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(230, 104, 60, 0.4);
-        }
-
-        /* Facebook - 青 */
-        .sns-link.facebook-colored {
+        .sns-link.facebook:hover {
             background: #1877f2;
+            color: white;
             border-color: #1877f2;
         }
 
-        .sns-link.facebook-colored:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(24, 119, 242, 0.4);
-        }
-
-        /* LINE - 緑 */
-        .sns-link.line-colored {
+        .sns-link.line:hover {
             background: #00c300;
+            color: white;
             border-color: #00c300;
         }
 
-        .sns-link.line-colored:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 195, 0, 0.4);
-        }
-
-        /* Online Store - 黒 */
-        .sns-link.store-colored {
+        .sns-link.online-store:hover {
             background: var(--primary-color);
+            color: white;
             border-color: var(--primary-color);
-        }
-
-        .sns-link.store-colored:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         .sns-link i {
             font-size: 1.3rem;
         }
 
-        /* 予約セクションスタイル */
-        .reservation {
-            background: var(--white);
-            padding: 5rem 0;
-        }
-
-        .reservation-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .reservation-info {
-            text-align: center;
-        }
-
-        .reservation-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            font-weight: 400;
-        }
-
-        .reservation-info p {
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        .reservation-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .method-card {
+        /* SNSセクションの背景を変更 */
+        .sns {
             background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .method-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .method-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
             color: var(--primary-color);
         }
 
-        .phone-number {
-            font-size: 1.5rem;
-            font-weight: 500;
+        .sns .section-title {
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
         }
 
-        .hours-note {
-            font-size: 0.9rem;
+        .sns .section-subtitle {
             color: var(--text-light);
         }
-
-        .reservation-btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-bottom: 0.5rem;
-        }
-
-        .reservation-btn.line-btn {
-            background: #00c300;
-        }
-
-        .reservation-btn.instagram-btn {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-
-        .reservation-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        /* その他の既存スタイル続き... */
 
         /* マップスタイル */
         .map-container iframe {
@@ -602,3 +512,59 @@
                 <div class="access-info">
                     <div class="info-item">
                         <div class="info-label">Address</div>
+                        <div class="info-value">
+                            〒501-3744<br>
+                            岐阜県美濃市段町137
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">0575-33-0311</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">営業時間</div>
+                        <div class="info-value">
+                            <table class="hours-table">
+                                <tr>
+                                    <td>月曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>火曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>水曜日</td>
+                                    <td class="closed">定休日</td>
+                                </tr>
+                                <tr>
+                                    <td>木曜日</td>
+                                    <td>10:00 - 21:00</td>
+                                </tr>
+                                <tr>
+                                    <td>金曜日</td>
+                                    <td>10:00 - 21:00</td>
+                                </tr>
+                                <tr>
+                                    <td>土曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>日曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Access</div>
+                        <div class="info-value">
+                            長良川鉄道 美濃市駅より徒歩約10分<br>
+                            駐車場完備
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container" id="map">
+                    <!-- Google Maps 埋め込み - 正確な位置 -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m1
