@@ -32,11 +32,163 @@
             --black: #000000;
         }
 
-        /* ロゴスタイル調整 */
+        /* ロゴスタイル調整 - イチヒロのブランドロゴ風 */
         .logo {
             font-family: 'Georgia', 'Times New Roman', serif;
             font-weight: 400;
+            position: relative;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+        
+        /* ロゴの背景（黒い四角形の波打つデザイン） */
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--primary-color);
+            z-index: -1;
+            clip-path: polygon(
+                0 0, 
+                100% 0, 
+                100% 70%, 
+                90% 75%, 
+                80% 72%, 
+                70% 77%, 
+                60% 73%, 
+                50% 78%, 
+                40% 74%, 
+                30% 79%, 
+                20% 75%, 
+                10% 80%, 
+                0 75%
+            );
+        }
+        
+        .logo {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        /* ヘッダーのロゴ調整 */
+        header {
+            background: var(--white);
+        }
+        
+        /* SVGロゴスタイル */
+        .logo-svg {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-svg:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-svg svg {
+            display: block;
+        }
+        
+        /* ナビゲーションメニューの色調整 */
+        .nav-menu a {
             color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .nav-menu a::after {
+            background: var(--primary-color);
+        }
+        
+        /* 店内ギャラリースタイル */
+        .store-gallery {
+            margin: 3rem 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            background: #f0f0f0;
+            aspect-ratio: 16/10;
+        }
+        
+        .gallery-item.main {
+            grid-column: span 2;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        
+        /* 店内写真のプレースホルダー（実際の写真に置き換え） */
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(0,0,0,0.2);
+            font-size: 3rem;
+            font-family: Georgia, serif;
+            z-index: 1;
+        }
+        
+        .gallery-item:nth-child(1)::before {
+            content: '1F';
+        }
+        
+        .gallery-item:nth-child(2)::before {
+            content: '2F';
+        }
+        
+        .gallery-item:nth-child(3)::before {
+            content: 'ENTRANCE';
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item.main {
+                grid-column: span 1;
+            }
         }
 
         /* ヒーローセクションの背景を黒基調に */
@@ -173,7 +325,15 @@
     <!-- ヘッダー -->
     <header id="header">
         <nav class="navbar">
-            <a href="#" class="logo">ICHIHIRO</a>
+            <!-- SVGロゴ版（よりブランドロゴに近いデザイン） -->
+            <a href="#" class="logo-svg">
+                <svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 背景の黒い形状 -->
+                    <path d="M0 0 L180 0 L180 35 Q170 40 160 37 Q150 42 140 38 Q130 43 120 39 Q110 44 100 40 Q90 45 80 41 Q70 43 60 40 Q50 44 40 41 Q30 45 20 42 Q10 43 0 40 Z" fill="#000000"/>
+                    <!-- ICHIHIROのテキスト -->
+                    <text x="90" y="25" font-family="Georgia, serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="3">ICHIHIRO</text>
+                </svg>
+            </a>
             <ul class="nav-menu">
                 <li><a href="#concept">CONCEPT</a></li>
                 <li><a href="#floor">FLOOR</a></li>
@@ -194,7 +354,15 @@
         <div class="hero-decoration left"></div>
         <div class="hero-decoration right"></div>
         <div class="hero-content">
-            <h1>ICHIHIRO</h1>
+            <!-- ヒーローセクションにもロゴデザインを追加 -->
+            <div style="margin-bottom: 2rem;">
+                <svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                    <!-- 背景の黒い形状 -->
+                    <path d="M0 10 L300 10 L300 60 Q280 65 260 62 Q240 67 220 63 Q200 68 180 64 Q160 69 140 65 Q120 70 100 66 Q80 68 60 65 Q40 69 20 67 Q10 68 0 65 Z" fill="#ffffff" opacity="0.95"/>
+                    <!-- ICHIHIROのテキスト -->
+                    <text x="150" y="45" font-family="Georgia, serif" font-size="35" font-weight="400" fill="#000000" text-anchor="middle" letter-spacing="5">ICHIHIRO</text>
+                </svg>
+            </div>
             <p class="tagline">BOUTIQUE MINO</p>
             <p class="tagline">美濃市で愛され続ける婦人服専門店</p>
         </div>
@@ -217,12 +385,15 @@
                         幅広い年代の女性に向けた洗練されたスタイルをご提案いたします。
                     </p>
                     <p>
-                        お客様一人ひとりに寄り添い、その方らしい美しさを引き出すお手伝いをさせていただきます。
-                        ゆったりとした空間で、特別なショッピング体験をお楽しみください。
+                        純白のタイルで統一された明るく開放的な店内は、ゆったりとしたショッピングを
+                        お楽しみいただける空間となっております。お客様一人ひとりに寄り添い、
+                        その方らしい美しさを引き出すお手伝いをさせていただきます。
                     </p>
                 </div>
                 <div class="concept-image">
-                    <!-- ロゴまたは店舗画像 -->
+                    <img src="https://github.com/startol7/ichihiro/assets/[your-id]/store-interior1.jpg" 
+                         alt="イチヒロ店内" 
+                         style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -233,25 +404,45 @@
         <div class="container">
             <h2 class="section-title">FLOOR GUIDE</h2>
             <p class="section-subtitle">フロアのご案内</p>
+            
+            <!-- 店内ギャラリー -->
+            <div class="store-gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-item main">
+                        <img src="https://github.com/startol7/ichihiro/assets/[your-id]/store-floor1.jpg" 
+                             alt="1階フロア">
+                        <div class="gallery-caption">1F カジュアルフロア</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://github.com/startol7/ichihiro/assets/[your-id]/store-floor2.jpg" 
+                             alt="2階フロア">
+                        <div class="gallery-caption">2F ラグジュアリーフロア</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://github.com/startol7/ichihiro/assets/[your-id]/store-entrance.jpg" 
+                             alt="店舗入口">
+                        <div class="gallery-caption">エントランス</div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="floors">
                 <div class="floor-card">
                     <div class="floor-number">1F</div>
                     <h3 class="floor-title">Casual Rich</h3>
                     <p class="floor-description">
-                        デイリーに着こなせるカジュアルウェアから、
-                        特別な日のおでかけ着まで。
-                        上質な素材とデザインにこだわった、
-                        大人のカジュアルスタイルをご提案いたします。
+                        明るく開放的な1階フロアでは、デイリーに着こなせるカジュアルウェアから、
+                        特別な日のおでかけ着まで幅広く取り揃えております。
+                        純白のタイルと黒のアクセントが印象的な、モダンで洗練された空間です。
                     </p>
                 </div>
                 <div class="floor-card">
                     <div class="floor-number">2F</div>
                     <h3 class="floor-title">Luxury Collection</h3>
                     <p class="floor-description">
+                        落ち着いた雰囲気の2階フロアには、厳選されたラグジュアリーコレクションを展開。
                         インポートブランドから国内高級ブランドまで、
-                        厳選されたラグジュアリーコレクション。
-                        フォーマルシーンからパーティースタイルまで、
-                        特別な装いをお探しの方へ。
+                        特別な装いをお探しの方のための上質な空間です。
                     </p>
                 </div>
             </div>
@@ -334,9 +525,9 @@
                     </div>
                 </div>
                 <div class="map-container" id="map">
-                    <!-- Google Maps 埋め込み -->
+                    <!-- Google Maps 埋め込み - イチヒロの正確な位置 -->
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.8887745298!2d136.90747931525826!3d35.49739998023051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003a93f8f5d6b8f%3A0x6f5b9c3a8e0a5c5a!2z44Kk44OB44OS44Ot!5e0!3m2!1sja!2sjp!4v1635840000000!5m2!1sja!2sjp" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.2273457799996!2d136.90566737654426!3d35.374768972659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600319ff16951c5d%3A0x46b57e1a5d6e5c2b!2z44Kk44OB44OS44Ot!5e0!3m2!1sja!2sjp!4v1704355200000!5m2!1sja!2sjp" 
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
@@ -344,6 +535,14 @@
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="https://maps.app.goo.gl/M4m45B4nrcQZveqE7" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           style="color: var(--primary-color); text-decoration: underline;">
+                            Google Mapsで詳しく見る →
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
