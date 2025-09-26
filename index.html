@@ -3,26 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="岐阜県美濃市の高級ブティック イチヒロ。15年以上の実績を持つ婦人服専門店。カジュアルからラグジュアリーまで幅広いコレクションをご用意しております。">
+    <meta name="description" content="岐阜県美濃市の婦人服専門店 イチヒロ。上質なファッションとおもてなしで、お客様の美しさを引き出します。">
     
     <!-- OGP Tags -->
-    <meta property="og:title" content="ICHIHIRO - ブティック イチヒロ | 美濃市の高級婦人服専門店">
-    <meta property="og:description" content="岐阜県美濃市の高級ブティック。15年以上の実績を持つ婦人服専門店">
+    <meta property="og:title" content="ICHIHIRO - ブティック イチヒロ | 美濃市の婦人服専門店">
+    <meta property="og:description" content="岐阜県美濃市の婦人服専門店。カジュアルからフォーマルまで幅広いコレクション">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ichihiro-mino.com">
+    <meta property="og:url" content="https://startol7.github.io/ichihiro/">
     <meta property="og:site_name" content="ICHIHIRO">
     
-    <title>ICHIHIRO - ブティック イチヒロ | 美濃市の高級婦人服専門店</title>
+    <title>ICHIHIRO - ブティック イチヒロ | 美濃市の婦人服専門店</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- Google Fonts (Optional) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* イチヒロのブランドカラーに変更 */
+        :root {
+            --primary-color: #000000;      /* 黒（ロゴのメインカラー） */
+            --secondary-color: #333333;     /* ダークグレー */
+            --accent-color: #ffffff;        /* 白（アクセント） */
+            --text-light: #666666;          /* グレーテキスト */
+            --bg-light: #f5f5f5;           /* 薄いグレー背景 */
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        /* ロゴスタイル調整 */
+        .logo {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
+
+        /* ヒーローセクションの背景を黒基調に */
+        .hero {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            color: var(--white);
+        }
+
+        .hero h1 {
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .tagline {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* 営業時間テーブル */
+        .hours-table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 0.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .hours-table td:first-child {
+            font-weight: 500;
+            color: var(--secondary-color);
+            width: 30%;
+        }
+
+        .hours-table .closed {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        /* SNSアイコンスタイル */
+        .sns-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--primary-color);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+            min-width: 180px;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        .sns-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* 各SNSのブランドカラー */
+        .sns-link.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            border-color: #e6683c;
+        }
+
+        .sns-link.facebook:hover {
+            background: #1877f2;
+            color: white;
+            border-color: #1877f2;
+        }
+
+        .sns-link.line:hover {
+            background: #00c300;
+            color: white;
+            border-color: #00c300;
+        }
+
+        .sns-link.online-store:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .sns-link i {
+            font-size: 1.3rem;
+        }
+
+        /* SNSセクションの背景を変更 */
+        .sns {
+            background: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .sns .section-title {
+            color: var(--primary-color);
+        }
+
+        .sns .section-subtitle {
+            color: var(--text-light);
+        }
+
+        /* マップスタイル */
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(20%);
+        }
+
+        /* フッターを黒に */
+        footer {
+            background: var(--primary-color);
+        }
+
+        /* アクセントカラーの調整 */
+        .floor-card::before {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+
+        .floor-number {
+            color: var(--primary-color);
+        }
+
+        /* コンセプトセクション */
+        .concept-image {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -50,8 +195,8 @@
         <div class="hero-decoration right"></div>
         <div class="hero-content">
             <h1>ICHIHIRO</h1>
-            <p class="tagline">BOUTIQUE SINCE 2009</p>
-            <p class="tagline">美濃市で愛され続ける高級ブティック</p>
+            <p class="tagline">BOUTIQUE MINO</p>
+            <p class="tagline">美濃市で愛され続ける婦人服専門店</p>
         </div>
     </section>
 
@@ -62,9 +207,9 @@
             <p class="section-subtitle">私たちの想い</p>
             <div class="concept-content">
                 <div class="concept-text">
-                    <h3>15年以上の信頼と実績</h3>
+                    <h3>地域に愛される店舗として</h3>
                     <p>
-                        イチヒロは、2009年より岐阜県美濃市で高級婦人服専門店として営業しております。
+                        イチヒロは、岐阜県美濃市で長年にわたり婦人服専門店として営業しております。
                         地域の皆様に愛され、支えられながら、上質なファッションをお届けしてまいりました。
                     </p>
                     <p>
@@ -72,13 +217,12 @@
                         幅広い年代の女性に向けた洗練されたスタイルをご提案いたします。
                     </p>
                     <p>
-                        店内は、純白のタイルで統一された空間に、それぞれのフロアで異なる雰囲気を演出。
-                        お客様がゆったりとショッピングをお楽しみいただける空間づくりを心がけています。
+                        お客様一人ひとりに寄り添い、その方らしい美しさを引き出すお手伝いをさせていただきます。
+                        ゆったりとした空間で、特別なショッピング体験をお楽しみください。
                     </p>
                 </div>
                 <div class="concept-image">
-                    <!-- 実際の店舗画像を追加する場合は以下のようにします -->
-                    <!-- <img src="images/store-interior.jpg" alt="イチヒロ店内"> -->
+                    <!-- ロゴまたは店舗画像 -->
                 </div>
             </div>
         </div>
@@ -120,10 +264,10 @@
             <h2 class="section-title">BRANDS</h2>
             <p class="section-subtitle">取り扱いブランド</p>
             <div class="brand-list">
-                <div class="brand-item">国内デザイナーズ</div>
-                <div class="brand-item">インポート</div>
-                <div class="brand-item">オリジナル</div>
-                <div class="brand-item">アクセサリー</div>
+                <div class="brand-item"><span>国内デザイナーズ</span></div>
+                <div class="brand-item"><span>インポート</span></div>
+                <div class="brand-item"><span>オリジナル</span></div>
+                <div class="brand-item"><span>アクセサリー</span></div>
             </div>
         </div>
     </section>
@@ -147,10 +291,38 @@
                         <div class="info-value">0575-33-0311</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Hours</div>
+                        <div class="info-label">営業時間</div>
                         <div class="info-value">
-                            10:00 - 19:00<br>
-                            定休日：お問い合わせください
+                            <table class="hours-table">
+                                <tr>
+                                    <td>月曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>火曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>水曜日</td>
+                                    <td class="closed">定休日</td>
+                                </tr>
+                                <tr>
+                                    <td>木曜日</td>
+                                    <td>10:00 - 21:00</td>
+                                </tr>
+                                <tr>
+                                    <td>金曜日</td>
+                                    <td>10:00 - 21:00</td>
+                                </tr>
+                                <tr>
+                                    <td>土曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>日曜日</td>
+                                    <td>10:00 - 20:00</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                     <div class="info-item">
@@ -162,23 +334,16 @@
                     </div>
                 </div>
                 <div class="map-container" id="map">
-                    <!-- Google Maps を埋め込む場合は以下のようにします -->
-                    <!-- <iframe src="https://maps.google.com/maps?q=岐阜県美濃市段町137番地&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            frameborder="0" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                    </iframe> -->
-                    <div class="map-placeholder">
-                        <p>Google Maps</p>
-                        <p class="map-link">
-                            <a href="https://maps.google.com/maps?q=岐阜県美濃市段町137番地" target="_blank" rel="noopener noreferrer">
-                                地図を開く →
-                            </a>
-                        </p>
-                    </div>
+                    <!-- Google Maps 埋め込み -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.8887745298!2d136.90747931525826!3d35.49739998023051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003a93f8f5d6b8f%3A0x6f5b9c3a8e0a5c5a!2z44Kk44OB44OS44Ot!5e0!3m2!1sja!2sjp!4v1635840000000!5m2!1sja!2sjp" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -190,15 +355,27 @@
             <h2 class="section-title">FOLLOW US</h2>
             <p class="section-subtitle">最新情報はこちらから</p>
             <div class="sns-links">
-                <a href="https://www.instagram.com/ichihiro137/" class="sns-link" target="_blank" rel="noopener noreferrer">
-                    Instagram
+                <a href="https://www.instagram.com/ichihiro137/" class="sns-link instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
                 </a>
-                <a href="https://www.facebook.com/p/%E3%82%A4%E3%83%81%E3%83%92%E3%83%AD-100054220611964/" class="sns-link" target="_blank" rel="noopener noreferrer">
-                    Facebook
+                <a href="https://www.facebook.com/p/%E3%82%A4%E3%83%81%E3%83%92%E3%83%AD-100054220611964/" class="sns-link facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
                 </a>
-                <a href="https://ichihiromino.stores.jp" class="sns-link" target="_blank" rel="noopener noreferrer">
-                    Online Store
+                <a href="https://page.line.me/vmp9151a" class="sns-link line" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-line"></i>
+                    <span>LINE</span>
                 </a>
+                <a href="https://ichihiromino.stores.jp" class="sns-link online-store" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Online Store</span>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: var(--text-light); font-size: 0.9rem;">
+                    LINEでお友達登録いただくと、お得な情報をお届けします
+                </p>
             </div>
         </div>
     </section>
@@ -210,6 +387,7 @@
             <div class="footer-info">
                 <span>岐阜県美濃市段町137番地</span>
                 <span>TEL: 0575-33-0311</span>
+                <span>定休日: 水曜日</span>
             </div>
             <div class="copyright">
                 &copy; 2025 ICHIHIRO. All Rights Reserved.
@@ -218,6 +396,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
