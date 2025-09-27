@@ -320,11 +320,40 @@ section {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     aspect-ratio: 4/3;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    background: var(--bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease;
+}
+
+.concept-image:hover {
+    transform: scale(1.02);
+}
+
+/* 透かし文字を削除して、画像を正常に表示 */
+.concept-image::before {
+    display: none; /* 透かし文字を非表示 */
+}
+
+.concept-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block !important; /* 画像を確実に表示 */
+}
+
+/* 画像が存在しない場合のフォールバック */
+.concept-image:empty::before,
+.concept-image:not(:has(img))::before {
+    content: 'ICHIHIRO';
+    font-size: 3rem;
+    color: rgba(212,175,55,0.3);
+    letter-spacing: 0.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    display: block;
 }
 
 .concept-image:hover {
@@ -1474,9 +1503,50 @@ a:focus {
         display: block;
     }
     
-    .concept-image {
-        margin-top: 2rem;
+    .concept-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.concept-text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .concept-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
     }
+    
+    .concept-text {
+        order: 1;
+    }
+    
+    .concept-image {
+        order: 2;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .concept-content {
+        gap: 2rem;
+    }
+    
+    .concept-text {
+        padding: 1rem;
+    }
+}
+
 }
 
 /* Safari Fixes */
