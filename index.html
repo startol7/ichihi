@@ -1,12 +1,4 @@
-<!-- ヒーローセクション -->
-    <section class="hero">
-        <div class="hero-decoration left"></div>
-        <div class="hero-decoration right"></div>
-        <div class="hero-content">
-            <!-- 洗練されたロゴデザイン -->
-            <div class="logo-container" style="margin-bottom: 2rem; position: relative;">
-                <!-- アニメーション用の装飾線 -->
-                <div class="logo-decoration-line" style="position: absolute; top: 50%;<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -34,13 +26,14 @@
         <nav class="navbar">
             <!-- 正確なICHIHIROロゴ -->
             <a href="#" class="logo-svg">
-                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-                    <!-- 黒い背景の形状（波打つ下部） -->
-                    <path d="M10 5 L190 5 L190 40 Q185 45 180 42 Q175 46 170 43 Q165 47 160 44 Q155 48 150 45 Q145 49 140 46 Q135 48 130 45 Q125 49 120 46 Q115 50 110 47 Q105 49 100 46 Q95 50 90 47 Q85 49 80 46 Q75 50 70 47 Q65 49 60 46 Q55 50 50 47 Q45 49 40 46 Q35 50 30 47 Q25 49 20 46 Q15 48 10 45 Z" fill="#000000"/>
-                    <!-- ICHIHIROテキスト（正確なフォント） -->
-                    <text x="100" y="30" font-family="Times New Roman, serif" font-size="24" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="2">ICHIHIRO</text>
-                </svg>
-            </a>
+    <svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
+        <!-- 黒い背景の波形状 -->
+        <path d="M10 5 L170 5 L170 35 Q165 38 160 36 Q155 39 150 37 Q145 40 140 38 Q135 41 130 39 Q125 40 120 38 Q115 41 110 39 Q105 40 100 38 Q95 41 90 39 Q85 40 80 38 Q75 41 70 39 Q65 40 60 38 Q55 41 50 39 Q45 40 40 38 Q35 41 30 39 Q25 40 20 38 Q15 39 10 37 Z" fill="#000000"/>
+        <!-- ICHIHIROテキスト -->
+        <text x="90" y="26" font-family="Times New Roman, serif" font-size="18" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">ICHIHIRO</text>
+    </svg>
+</a>
+
             <ul class="nav-menu">
                 <li><a href="#concept">CONCEPT</a></li>
                 <li><a href="#floor">FLOOR</a></li>
@@ -62,128 +55,18 @@
         <div class="hero-decoration left"></div>
         <div class="hero-decoration right"></div>
         <div class="hero-content">
-            <!-- 洗練されたロゴデザイン -->
-            <div class="logo-hero-wrapper" style="position: relative; margin-bottom: 3rem;">
-                <!-- 背景の装飾要素 -->
-                <div style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 500px; height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0.3) 80%, transparent 100%);"></div>
-                </div>
-                
-                <!-- メインロゴ -->
-                <svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" style="position: relative; z-index: 2;">
-                    <!-- グラデーション定義 -->
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
-                        </linearGradient>
-                        <!-- ドロップシャドウ -->
-                        <filter id="elegantShadow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-                            <feOffset dx="0" dy="4" result="offsetblur"/>
-                            <feFlood flood-color="#000000" flood-opacity="0.2"/>
-                            <feComposite in2="offsetblur" operator="in"/>
-                            <feMerge>
-                                <feMergeNode/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    
-                    <!-- 背景形状（より洗練された波） -->
-                    <path d="M 40 25 L 360 25 L 360 75 C 350 80, 340 77, 330 80 C 320 83, 310 78, 300 81 C 290 84, 280 79, 270 82 C 260 85, 250 80, 240 83 C 230 86, 220 81, 210 84 C 200 87, 190 82, 180 85 C 170 88, 160 83, 150 86 C 140 89, 130 84, 120 87 C 110 90, 100 85, 90 88 C 80 91, 70 86, 60 89 C 50 92, 40 87, 40 90 Z" 
-                         fill="url(#logoGradient)" 
-                         opacity="0.98"
-                         filter="url(#elegantShadow)"/>
-                    
-                    <!-- 上部の細いアクセントライン -->
-                    <rect x="40" y="20" width="320" height="1" fill="#000000" opacity="0.1"/>
-                    
-                    <!-- ICHIHIROテキスト（エレガントなセリフ体） -->
-                    <text x="200" y="58" 
-                          font-family="Didot, Bodoni MT, Georgia, serif" 
-                          font-size="38" 
-                          font-weight="300" 
-                          fill="#000000" 
-                          text-anchor="middle" 
-                          letter-spacing="5">
-                        ICHIHIRO
-                    </text>
-                    
-                    <!-- 下部の装飾的なアクセント -->
-                    <text x="200" y="95" 
-                          font-family="Georgia, serif" 
-                          font-size="10" 
-                          font-weight="300" 
-                          fill="#000000" 
-                          text-anchor="middle" 
-                          letter-spacing="3"
-                          opacity="0.5">
-                        EST. MINO
-                    </text>
-                </svg>
-                
-                <!-- 左右の装飾 -->
-                <div style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%);">
-                    <svg width="40" height="40" viewBox="0 0 40 40">
-                        <circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.5)"/>
-                        <circle cx="20" cy="20" r="5" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <circle cx="20" cy="20" r="10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%);">
-                    <svg width="40" height="40" viewBox="0 0 40 40">
-                        <circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.5)"/>
-                        <circle cx="20" cy="20" r="5" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <circle cx="20" cy="20" r="10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
-                    </svg>
-                </div>
+            <!-- 正確なロゴデザイン -->
+            <div style="margin-bottom: 2rem;">
+               <svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));">
+    <!-- 黒い背景の波形状 -->
+    <path d="M20 20 L380 20 L380 80 Q370 85 360 82 Q350 87 340 83 Q330 88 320 84 Q310 89 300 85 Q290 90 280 86 Q270 89 260 85 Q250 90 240 86 Q230 91 220 87 Q210 90 200 86 Q190 91 180 87 Q170 90 160 86 Q150 91 140 87 Q130 90 120 86 Q110 91 100 87 Q90 90 80 86 Q70 91 60 87 Q50 90 40 86 Q30 89 20 85 Z" fill="#000000" opacity="0.95"/>
+    <!-- ICHIHIROテキスト -->
+    <text x="200" y="58" font-family="Times New Roman, serif" font-size="42" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="3">ICHIHIRO</text>
+</svg>
             </div>
-            
-            <!-- アニメーション付きタグライン -->
-            <div class="tagline-wrapper" style="animation: fadeInUp 1.5s ease-out 0.5s both;">
-                <p class="tagline" style="font-family: 'Didot', 'Georgia', serif; font-weight: 300; letter-spacing: 4px; font-size: 1.1rem;">BOUTIQUE MINO</p>
-                <div style="width: 50px; height: 1px; background: rgba(255,255,255,0.5); margin: 1.5rem auto;"></div>
-                <p class="tagline" style="font-size: 1rem; opacity: 0.9;">美濃市で愛され続ける婦人服専門店</p>
-            </div>
-            
-            <!-- スクロール誘導アニメーション -->
-            <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
-                <svg width="30" height="40" viewBox="0 0 30 40">
-                    <rect x="10" y="10" width="10" height="20" rx="5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-                    <circle cx="15" cy="18" r="2" fill="rgba(255,255,255,0.8)" style="animation: scrollWheel 2s infinite;"/>
-                </svg>
-            </div>
+            <p class="tagline">BOUTIQUE MINO</p>
+            <p class="tagline">美濃市で愛され続ける婦人服専門店</p>
         </div>
-        
-        <!-- アニメーション定義 -->
-        <style>
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            
-            @keyframes bounce {
-                0%, 100% { transform: translateX(-50%) translateY(0); }
-                50% { transform: translateX(-50%) translateY(10px); }
-            }
-            
-            @keyframes scrollWheel {
-                0% { transform: translateY(0); opacity: 1; }
-                50% { transform: translateY(5px); opacity: 0.5; }
-                100% { transform: translateY(0); opacity: 1; }
-            }
-            
-            .logo-hero-wrapper {
-                animation: fadeInUp 1s ease-out;
-            }
-        </style>
     </section>
 
     <!-- コンセプト -->
@@ -417,4 +300,39 @@
                     <i class="fab fa-facebook-f"></i>
                     <span>Facebook</span>
                 </a>
-                <a href="https://page.line.me/vmp9151a" class="sns-lin
+                <a href="https://page.line.me/vmp9151a" class="sns-link line-colored" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-line"></i>
+                    <span>LINE</span>
+                </a>
+                <a href="https://ichihiromino.stores.jp" class="sns-link store-colored" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Online Store</span>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #666; font-size: 0.9rem;">
+                    LINEでお友達登録いただくと、お得な情報をお届けします
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ICHIHIRO</div>
+            <div class="footer-info">
+                <span>岐阜県美濃市段町137</span>
+                <span>TEL: 0575-33-0311</span>
+                <span>定休日: 水曜日</span>
+            </div>
+            <div class="copyright">
+                &copy; 2025 ICHIHIRO. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
