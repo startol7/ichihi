@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,32 +21,12 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- ヘッダー -->
     <header id="header">
         <nav class="navbar">
-             <!-- 背景形状（より洗練された波） -->
-                    <path d="M 40 25 L 360 25 L 360 75 C 350 80, 340 77, 330 80 C 320 83, 310 78, 300 81 C 290 84, 280 79, 270 82 C 260 85, 250 80, 240 83 C 230 86, 220 81, 210 84 C 200 87, 190 82, 180 85 C 170 88, 160 83, 150 86 C 140 89, 130 84, 120 87 C 110 90, 100 85, 90 88 C 80 91, 70 86, 60 89 C 50 92, 40 87, 40 90 Z" 
-                         fill="url(#logoGradient)" 
-                         opacity="0.98"
-                         filter="url(#elegantShadow)"/>
-
-                    <!-- 上部の細いアクセントライン -->
-                    <rect x="40" y="20" width="320" height="1" fill="#000000" opacity="0.1"/>
-
-                    <!-- ICHIHIROテキスト（エレガントなセリフ体） -->
-                    <text x="200" y="58" 
-                          font-family="Didot, Bodoni MT, Georgia, serif" 
-                          font-size="38" 
-                          font-weight="300" 
-                          fill="#000000" 
-                          text-anchor="middle" 
-                          letter-spacing="5">
-                        ICHIHIRO
-                    </text>
-    </svg>
-</a>
-
+            <!-- ナビゲーションメニュー -->
             <ul class="nav-menu">
                 <li><a href="#concept">CONCEPT</a></li>
                 <li><a href="#floor">FLOOR</a></li>
@@ -54,6 +35,7 @@
                 <li><a href="#access">ACCESS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
+            <!-- モバイルメニュー -->
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
                 <span></span>
@@ -62,117 +44,76 @@
         </nav>
     </header>
 
- <!-- ヒーローセクション改良版 -->
-<section class="hero">
-    <!-- 背景画像レイヤー -->
-    <div class="hero-bg-image">
-        <img src="images/store-interior1.jpg.jpg" 
-             alt="イチヒロ店内" 
-             style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    
-    <!-- グラデーションオーバーレイ -->
-    <div class="hero-overlay"></div>
-    
-    <!-- パララックス装飾要素 -->
-    <div class="hero-particles">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    
-    <div class="hero-content">
-        <!-- 洗練されたロゴデザイン -->
-        <div class="logo-hero-wrapper">
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <!-- 背景画像 -->
+        <div class="hero-bg-image">
+            <img src="images/store-interior1.jpg" alt="イチヒロ店内" class="hero-bg-img">
+        </div>
+
+        <!-- グラデーションオーバーレイ -->
+        <div class="hero-overlay"></div>
+
+        <!-- パララックス装飾 -->
+        <div class="hero-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="hero-content">
             <!-- メインロゴ -->
-            <svg width="420" height="130" viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <!-- 高級感のあるグラデーション -->
-                    <linearGradient id="luxuryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
-                        <stop offset="50%" style="stop-color:#f8f8f8;stop-opacity:0.98" />
-                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.95" />
-                    </linearGradient>
-                    
-                    <!-- エレガントなドロップシャドウ -->
-                    <filter id="luxuryShadow">
-                        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
-                        <feOffset dx="0" dy="6" result="offsetblur"/>
-                        <feFlood flood-color="#000000" flood-opacity="0.3"/>
-                        <feComposite in2="offsetblur" operator="in"/>
-                        <feMerge>
-                            <feMergeNode/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
-                </defs>
-                
-                <!-- メイン背景形状 -->
-                <path d="M 30 30 L 390 30 L 390 85 
-                         C 380 90, 370 87, 360 90 
-                         S 340 87, 330 90 
-                         S 310 87, 300 90 
-                         S 280 87, 270 90 
-                         S 250 87, 240 90 
-                         S 220 87, 210 90 
-                         S 190 87, 180 90 
-                         S 160 87, 150 90 
-                         S 130 87, 120 90 
-                         S 100 87, 90 90 
-                         S 70 87, 60 90 
-                         S 40 87, 30 90 Z" 
-                     fill="url(#luxuryGradient)" 
-                     filter="url(#luxuryShadow)"/>
-                
-                <!-- 上部アクセントライン -->
-                <rect x="30" y="25" width="360" height="0.5" fill="#000000" opacity="0.15"/>
-                
-                <!-- ICHIHIRO メインテキスト -->
-                <text x="210" y="65" 
-                      font-family="Didot, Bodoni MT, Playfair Display, Georgia, serif" 
-                      font-size="40" 
-                      font-weight="300" 
-                      fill="#1a1a1a" 
-                      text-anchor="middle" 
-                      letter-spacing="6">
-                    ICHIHIRO
-                </text>
-                
-                <!-- サブテキスト -->
-                <text x="210" y="105" 
-                      font-family="Georgia, serif" 
-                      font-size="11" 
-                      font-weight="400" 
-                      fill="#1a1a1a" 
-                      text-anchor="middle" 
-                      letter-spacing="4"
-                      opacity="0.6">
-                    BOUTIQUE MINO
-                </text>
-            </svg>
-        </div>
-        
-        <!-- タグライン -->
-        <div class="tagline-elegant">
-            <span class="tagline-line"></span>
-            <p class="tagline-text">美濃市で愛され続ける婦人服専門店</p>
-            <span class="tagline-line"></span>
-        </div>
-        
-        <!-- CTAボタン -->
-        <div class="hero-cta">
-            <a href="#brands" class="cta-button">
-                <span>COLLECTION</span>
-                <svg width="20" height="12" viewBox="0 0 20 12">
-                    <path d="M2 1L10 9L18 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <div class="logo-hero-wrapper">
+                <svg width="420" height="130" viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="luxuryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+                            <stop offset="50%" style="stop-color:#f8f8f8;stop-opacity:0.98" />
+                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.95" />
+                        </linearGradient>
+                        <filter id="luxuryShadow">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+                            <feOffset dx="0" dy="6" result="offsetblur"/>
+                            <feFlood flood-color="#000000" flood-opacity="0.3"/>
+                            <feComposite in2="offsetblur" operator="in"/>
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <path d="M 30 30 L 390 30 L 390 85 C 380 90, 370 87, 360 90 S 340 87, 330 90 S 310 87, 300 90 S 280 87, 270 90 S 250 87, 240 90 S 220 87, 210 90 S 190 87, 180 90 S 160 87, 150 90 S 130 87, 120 90 S 100 87, 90 90 S 70 87, 60 90 S 40 87, 30 90 Z" 
+                        fill="url(#luxuryGradient)" 
+                        filter="url(#luxuryShadow)"/>
+
+                    <rect x="30" y="25" width="360" height="0.5" fill="#000000" opacity="0.15"/>
+                    <text x="210" y="65" font-family="Didot, Bodoni MT, Playfair Display, Georgia, serif" font-size="40" font-weight="300" fill="#1a1a1a" text-anchor="middle" letter-spacing="6">ICHIHIRO</text>
+                    <text x="210" y="105" font-family="Georgia, serif" font-size="11" font-weight="400" fill="#1a1a1a" text-anchor="middle" letter-spacing="4" opacity="0.6">BOUTIQUE MINO</text>
                 </svg>
-            </a>
+            </div>
+
+            <!-- タグライン -->
+            <div class="tagline-elegant">
+                <span class="tagline-line"></span>
+                <p class="tagline-text">美濃市で愛され続ける婦人服専門店</p>
+                <span class="tagline-line"></span>
+            </div>
+
+            <!-- CTAボタン -->
+            <div class="hero-cta">
+                <a href="#brands" class="cta-button">
+                    <span>COLLECTION</span>
+                    <svg width="20" height="12" viewBox="0 0 20 12">
+                        <path d="M2 1L10 9L18 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-    </div>
-    
-    <!-- スタイル定義 -->
+    </section>
+
     <style>
         /* ヒーローセクション全体 */
         .hero {
@@ -184,7 +125,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         /* 背景画像 */
         .hero-bg-image {
             position: absolute;
@@ -194,7 +135,7 @@
             height: 100%;
             z-index: 1;
         }
-        
+
         .hero-bg-image img {
             width: 100%;
             height: 100%;
@@ -203,12 +144,13 @@
             filter: brightness(0.7) contrast(1.1);
             animation: slowZoom 20s ease-in-out infinite alternate;
         }
-        
+
+        /* ゆっくりズーム */
         @keyframes slowZoom {
             0% { transform: scale(1); }
             100% { transform: scale(1.05); }
         }
-        
+
         /* グラデーションオーバーレイ */
         .hero-overlay {
             position: absolute;
@@ -216,13 +158,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(ellipse at center, 
-                        rgba(0,0,0,0.3) 0%, 
-                        rgba(0,0,0,0.5) 50%, 
-                        rgba(0,0,0,0.7) 100%);
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
             z-index: 2;
         }
-        
+
         /* パーティクル装飾 */
         .hero-particles {
             position: absolute;
@@ -231,7 +170,6 @@
             z-index: 3;
             overflow: hidden;
         }
-        
         .hero-particles span {
             position: absolute;
             width: 2px;
@@ -240,6 +178,18 @@
             border-radius: 50%;
             animation: float-particle 15s linear infinite;
         }
+
+        @keyframes float-particle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+        /* ヒーローコンテンツ */
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            text-align: center;
+            padding: 2rem;
+            animation  }
         
         .hero-particles span:nth-child(1) {
             left: 10%;
@@ -594,251 +544,4 @@
                     </p>
                 </div>
                 <div class="concept-image">
-                    <img src="images/store-interior1.jpg.jpg" 
-                         alt="イチヒロ店内" 
-                         style="width: 100%; height: 100%; object-fit: cover;"
-                         onerror="this.style.display='none'">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- フロアガイド -->
-    <section id="floor" class="floor-guide fade-in">
-        <div class="container">
-            <h2 class="section-title">FLOOR GUIDE</h2>
-            <p class="section-subtitle">フロアのご案内</p>
-
-            <!-- 店内ギャラリー -->
-            <div class="store-gallery">
-                <div class="gallery-grid">
-                    <div class="gallery-item main">
-                        <img src="images/store-floor1.jpg.jpg" 
-                             alt="1階フロア"
-                             onerror="this.style.display='none'">
-                        <div class="gallery-caption">1F カジュアルフロア</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/store-floor2.jpg.jpg" 
-                             alt="2階フロア"
-                             onerror="this.style.display='none'">
-                        <div class="gallery-caption">2F ラグジュアリーフロア</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/store-night.jpg.jpg" 
-                             alt="店舗入口"
-                             onerror="this.style.display='none'">
-                        <div class="gallery-caption">エントランス</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="floors">
-                <div class="floor-card">
-                    <div class="floor-number">1F</div>
-                    <h3 class="floor-title">Casual Rich</h3>
-                    <p class="floor-description">
-                        明るく開放的な1階フロアでは、デイリーに着こなせるカジュアルウェアから、
-                        特別な日のおでかけ着まで幅広く取り揃えております。
-                        純白のタイルと黒のアクセントが印象的な、モダンで洗練された空間です。
-                    </p>
-                </div>
-                <div class="floor-card">
-                    <div class="floor-number">2F</div>
-                    <h3 class="floor-title">Luxury Collection</h3>
-                    <p class="floor-description">
-                        落ち着いた雰囲気の2階フロアには、厳選されたラグジュアリーコレクションを展開。
-                        インポートブランドから国内高級ブランドまで、
-                        特別な装いをお探しの方のための上質な空間です。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ブランド -->
-    <section id="brands" class="brands fade-in">
-        <div class="container">
-            <h2 class="section-title">BRANDS</h2>
-            <p class="section-subtitle">取り扱いブランド</p>
-            <div class="brand-list">
-                <div class="brand-item"><span>Max Mara</span></div>
-                <div class="brand-item"><span>ALDRIDGE</span></div>
-                <div class="brand-item"><span>koyuki</span></div>
-                <div class="brand-item"><span>PRIDE</span></div>
-                <div class="brand-item"><span>poushal</span></div>
-                <div class="brand-item"><span>SUTSESO</span></div>
-                <div class="brand-item"><span>frontyard</span></div>
-                <div class="brand-item"><span>etc…</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 予約セクション -->
-    <section id="reservation" class="reservation fade-in">
-        <div class="container">
-            <h2 class="section-title">RESERVATION</h2>
-            <p class="section-subtitle">ご予約・お問い合わせ</p>
-            <div class="reservation-content">
-                <div class="reservation-info">
-                    <h3>ご予約について</h3>
-                    <p>
-                        お客様のご都合に合わせて、ゆっくりとお買い物をお楽しみいただけるよう
-                        事前のご予約も承っております。
-                    </p>
-                    <div class="reservation-methods">
-                        <div class="method-card">
-                            <i class="fas fa-phone-alt" style="font-size: 2rem; color: #000; margin-bottom: 1rem;"></i>
-                            <h4>お電話でのご予約</h4>
-                            <p class="phone-number">0575-33-0311</p>
-                            <p class="hours-note">受付時間：営業時間内</p>
-                        </div>
-                        <div class="method-card">
-                            <i class="fab fa-line" style="font-size: 2rem; color: #00c300; margin-bottom: 1rem;"></i>
-                            <h4>LINEでのご予約</h4>
-                            <a href="https://page.line.me/vmp9151a" class="reservation-btn line-btn" target="_blank">
-                                <i class="fab fa-line"></i> LINEで予約する
-                            </a>
-                            <p class="hours-note">24時間受付</p>
-                        </div>
-                        <div class="method-card">
-                            <i class="fab fa-instagram" style="font-size: 2rem; color: #e4405f; margin-bottom: 1rem;"></i>
-                            <h4>Instagramでのご予約</h4>
-                            <a href="https://www.instagram.com/ichihiro137/" class="reservation-btn instagram-btn" target="_blank">
-                                <i class="fab fa-instagram"></i> DMで予約する
-                            </a>
-                            <p class="hours-note">24時間受付</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- アクセス -->
-    <section id="access" class="access fade-in">
-        <div class="container">
-            <h2 class="section-title">ACCESS</h2>
-            <p class="section-subtitle">アクセス情報</p>
-            <div class="access-content">
-                <div class="access-info">
-                    <div class="info-item">
-                        <div class="info-label">Address</div>
-                        <div class="info-value">
-                            〒501-3744<br>
-                            岐阜県美濃市段町137
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Phone</div>
-                        <div class="info-value">0575-33-0311</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">営業時間</div>
-                        <div class="info-value">
-                            <table class="hours-table">
-                                <tr>
-                                    <td>月曜日</td>
-                                    <td>10:00 - 20:00</td>
-                                </tr>
-                                <tr>
-                                    <td>火曜日</td>
-                                    <td>10:00 - 20:00</td>
-                                </tr>
-                                <tr>
-                                    <td>水曜日</td>
-                                    <td class="closed">定休日</td>
-                                </tr>
-                                <tr>
-                                    <td>木曜日</td>
-                                    <td>10:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>金曜日</td>
-                                    <td>10:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>土曜日</td>
-                                    <td>10:00 - 20:00</td>
-                                </tr>
-                                <tr>
-                                    <td>日曜日</td>
-                                    <td>10:00 - 20:00</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Access</div>
-                        <div class="info-value">
-                            長良川鉄道 美濃市駅より徒歩約10分<br>
-                            駐車場完備
-                        </div>
-                    </div>
-                </div>
-                <div class="map-container" id="map">
-                    <div class="map-placeholder">
-                        <p>Google Maps</p>
-                        <p class="map-link">
-                            <a href="https://maps.app.goo.gl/M4m45B4nrcQZveqE7" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                地図を開く →
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SNS / Contact -->
-    <section id="contact" class="sns fade-in">
-        <div class="container">
-            <h2 class="section-title">FOLLOW US</h2>
-            <p class="section-subtitle">最新情報はこちらから</p>
-            <div class="sns-links">
-                <a href="https://www.instagram.com/ichihiro137/" class="sns-link instagram-colored" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://www.facebook.com/p/%E3%82%A4%E3%83%81%E3%83%92%E3%83%AD-100054220611964/" class="sns-link facebook-colored" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Facebook</span>
-                </a>
-                <a href="https://page.line.me/vmp9151a" class="sns-link line-colored" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-line"></i>
-                    <span>LINE</span>
-                </a>
-                <a href="https://ichihiromino.stores.jp" class="sns-link store-colored" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span>Online Store</span>
-                </a>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="color: #666; font-size: 0.9rem;">
-                    LINEでお友達登録いただくと、お得な情報をお届けします
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- フッター -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">ICHIHIRO</div>
-            <div class="footer-info">
-                <span>岐阜県美濃市段町137</span>
-                <span>TEL: 0575-33-0311</span>
-                <span>定休日: 水曜日</span>
-            </div>
-            <div class="copyright">
-                &copy; 2025 ICHIHIRO. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="main.js"></script>
-</body>
-</html>
+          
