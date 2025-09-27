@@ -9,7 +9,7 @@
     <meta property="og:title" content="ICHIHIRO - ブティック イチヒロ | 美濃市の婦人服専門店">
     <meta property="og:description" content="岐阜県美濃市の婦人服専門店。カジュアルからフォーマルまで幅広いコレクション">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://startol7.github.io/ichihiro/">
+    <meta property="og:url" content="https://ichihi.onrender.com/">
     <meta property="og:site_name" content="ICHIHIRO">
     
     <title>ICHIHIRO - ブティック イチヒロ | 美濃市の婦人服専門店</title>
@@ -19,307 +19,6 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* イチヒロのブランドカラーに変更 */
-        :root {
-            --primary-color: #000000;      /* 黒（ロゴのメインカラー） */
-            --secondary-color: #333333;     /* ダークグレー */
-            --accent-color: #ffffff;        /* 白（アクセント） */
-            --text-light: #666666;          /* グレーテキスト */
-            --bg-light: #f5f5f5;           /* 薄いグレー背景 */
-            --white: #ffffff;
-            --black: #000000;
-        }
-
-        /* ロゴスタイル調整 - イチヒロのブランドロゴ風 */
-        .logo {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            font-weight: 400;
-            position: relative;
-            padding: 0.5rem 1rem;
-            display: inline-block;
-        }
-        
-        /* ロゴの背景（黒い四角形の波打つデザイン） */
-        .logo::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--primary-color);
-            z-index: -1;
-            clip-path: polygon(
-                0 0, 
-                100% 0, 
-                100% 70%, 
-                90% 75%, 
-                80% 72%, 
-                70% 77%, 
-                60% 73%, 
-                50% 78%, 
-                40% 74%, 
-                30% 79%, 
-                20% 75%, 
-                10% 80%, 
-                0 75%
-            );
-        }
-        
-        .logo {
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
-        }
-        
-        /* ヘッダーのロゴ調整 */
-        header {
-            background: var(--white);
-        }
-        
-        /* SVGロゴスタイル */
-        .logo-svg {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        
-        .logo-svg:hover {
-            transform: scale(1.05);
-        }
-        
-        .logo-svg svg {
-            display: block;
-        }
-        
-        /* ナビゲーションメニューの色調整 */
-        .nav-menu a {
-            color: var(--primary-color);
-            font-weight: 500;
-        }
-        
-        .nav-menu a::after {
-            background: var(--primary-color);
-        }
-        
-        /* 店内ギャラリースタイル */
-        .store-gallery {
-            margin: 3rem 0;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: var(--shadow-md);
-            background: #f0f0f0;
-            aspect-ratio: 16/10;
-        }
-        
-        .gallery-item.main {
-            grid-column: span 2;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            padding: 1.5rem 1rem 1rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-        }
-        
-        /* 店内写真のプレースホルダー（実際の写真に置き換え） */
-        .gallery-item::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgba(0,0,0,0.2);
-            font-size: 3rem;
-            font-family: Georgia, serif;
-            z-index: 1;
-        }
-        
-        .gallery-item:nth-child(1)::before {
-            content: '1F';
-        }
-        
-        .gallery-item:nth-child(2)::before {
-            content: '2F';
-        }
-        
-        .gallery-item:nth-child(3)::before {
-            content: 'ENTRANCE';
-        }
-        
-        @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item.main {
-                grid-column: span 1;
-            }
-        }
-
-        /* ヒーローセクションの背景を黒基調に */
-        .hero {
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-            color: var(--white);
-        }
-
-        .hero h1 {
-            color: var(--white);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero .tagline {
-            color: rgba(255,255,255,0.9);
-        }
-
-        /* 営業時間テーブル */
-        .hours-table {
-            width: 100%;
-            margin-top: 1rem;
-            border-collapse: collapse;
-        }
-
-        .hours-table td {
-            padding: 0.5rem;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .hours-table td:first-child {
-            font-weight: 500;
-            color: var(--secondary-color);
-            width: 30%;
-        }
-
-        .hours-table .closed {
-            color: #e74c3c;
-            font-weight: 500;
-        }
-
-        /* SNSアイコンスタイル */
-        .sns-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: var(--white);
-            color: var(--primary-color);
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--primary-color);
-            min-width: 180px;
-            justify-content: center;
-            font-weight: 500;
-        }
-
-        .sns-link:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        /* 各SNSのブランドカラー */
-        .sns-link.instagram:hover {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
-            border-color: #e6683c;
-        }
-
-        .sns-link.facebook:hover {
-            background: #1877f2;
-            color: white;
-            border-color: #1877f2;
-        }
-
-        .sns-link.line:hover {
-            background: #00c300;
-            color: white;
-            border-color: #00c300;
-        }
-
-        .sns-link.online-store:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-
-        .sns-link i {
-            font-size: 1.3rem;
-        }
-
-        /* SNSセクションの背景を変更 */
-        .sns {
-            background: var(--bg-light);
-            color: var(--primary-color);
-        }
-
-        .sns .section-title {
-            color: var(--primary-color);
-        }
-
-        .sns .section-subtitle {
-            color: var(--text-light);
-        }
-
-        /* マップスタイル */
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            filter: grayscale(20%);
-        }
-
-        /* フッターを黒に */
-        footer {
-            background: var(--primary-color);
-        }
-
-        /* アクセントカラーの調整 */
-        .floor-card::before {
-            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        }
-
-        .floor-number {
-            color: var(--primary-color);
-        }
-
-        /* コンセプトセクション */
-        .concept-image {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        }
-    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -394,7 +93,8 @@
                 <div class="concept-image">
                     <img src="images/store-interior1.jpg.jpg" 
                          alt="イチヒロ店内" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
+                         style="width: 100%; height: 100%; object-fit: cover;"
+                         onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
@@ -411,17 +111,20 @@
                 <div class="gallery-grid">
                     <div class="gallery-item main">
                         <img src="images/store-floor1.jpg.jpg" 
-                             alt="1階フロア">
+                             alt="1階フロア"
+                             onerror="this.style.display='none'">
                         <div class="gallery-caption">1F カジュアルフロア</div>
                     </div>
                     <div class="gallery-item">
                         <img src="images/store-floor2.jpg.jpg" 
-                             alt="2階フロア">
+                             alt="2階フロア"
+                             onerror="this.style.display='none'">
                         <div class="gallery-caption">2F ラグジュアリーフロア</div>
                     </div>
                     <div class="gallery-item">
                         <img src="images/store-night.jpg.jpg" 
-                             alt="店舗入口">
+                             alt="店舗入口"
+                             onerror="this.style.display='none'">
                         <div class="gallery-caption">エントランス</div>
                     </div>
                 </div>
@@ -450,7 +153,21 @@
         </div>
     </section>
 
-    <!-- 予約セクション（新規追加） -->
+    <!-- ブランド -->
+    <section id="brands" class="brands fade-in">
+        <div class="container">
+            <h2 class="section-title">BRANDS</h2>
+            <p class="section-subtitle">取り扱いブランド</p>
+            <div class="brand-list">
+                <div class="brand-item"><span>国内デザイナーズ</span></div>
+                <div class="brand-item"><span>インポート</span></div>
+                <div class="brand-item"><span>オリジナル</span></div>
+                <div class="brand-item"><span>アクセサリー</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 予約セクション -->
     <section id="reservation" class="reservation fade-in">
         <div class="container">
             <h2 class="section-title">RESERVATION</h2>
@@ -487,18 +204,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="brands" class="brands fade-in">
-        <div class="container">
-            <h2 class="section-title">BRANDS</h2>
-            <p class="section-subtitle">取り扱いブランド</p>
-            <div class="brand-list">
-                <div class="brand-item"><span>国内デザイナーズ</span></div>
-                <div class="brand-item"><span>インポート</span></div>
-                <div class="brand-item"><span>オリジナル</span></div>
-                <div class="brand-item"><span>アクセサリー</span></div>
             </div>
         </div>
     </section>
@@ -565,6 +270,68 @@
                     </div>
                 </div>
                 <div class="map-container" id="map">
-                    <!-- Google Maps 埋め込み - 正確な位置 -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m1
+                    <div class="map-placeholder">
+                        <p>Google Maps</p>
+                        <p class="map-link">
+                            <a href="https://maps.app.goo.gl/M4m45B4nrcQZveqE7" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                地図を開く →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SNS / Contact -->
+    <section id="contact" class="sns fade-in">
+        <div class="container">
+            <h2 class="section-title">FOLLOW US</h2>
+            <p class="section-subtitle">最新情報はこちらから</p>
+            <div class="sns-links">
+                <a href="https://www.instagram.com/ichihiro137/" class="sns-link instagram-colored" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/p/%E3%82%A4%E3%83%81%E3%83%92%E3%83%AD-100054220611964/" class="sns-link facebook-colored" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://page.line.me/vmp9151a" class="sns-link line-colored" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-line"></i>
+                    <span>LINE</span>
+                </a>
+                <a href="https://ichihiromino.stores.jp" class="sns-link store-colored" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Online Store</span>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #666; font-size: 0.9rem;">
+                    LINEでお友達登録いただくと、お得な情報をお届けします
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ICHIHIRO</div>
+            <div class="footer-info">
+                <span>岐阜県美濃市段町137</span>
+                <span>TEL: 0575-33-0311</span>
+                <span>定休日: 水曜日</span>
+            </div>
+            <div class="copyright">
+                &copy; 2025 ICHIHIRO. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
