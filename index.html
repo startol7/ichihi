@@ -21,205 +21,328 @@
     <link rel="stylesheet" href="style.css">
     
     <!-- Inline Styles for Modern Design -->
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Noto Sans JP', -apple-system, sans-serif;
-            color: #1a1a1a;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .logo-header {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        
-        .logo-header:hover {
-            transform: translateY(-2px);
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-menu a {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            transition: color 0.3s;
-        }
-        
-        .nav-menu a:hover {
-            color: #d4af37;
-        }
-        
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        
-        .menu-toggle span {
-            width: 25px;
-            height: 2px;
-            background: #1a1a1a;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-        
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 600px;
-            margin-top: 70px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .hero-bg-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .hero-bg-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.5);
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
-            z-index: 2;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .tagline-wrapper {
-            margin: 2rem 0;
-            color: rgba(255,255,255,0.95);
-            font-size: 1.1rem;
-            letter-spacing: 0.2em;
-        }
-        
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 2.5rem;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-        
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 300;
-            letter-spacing: 0.2em;
-            margin-bottom: 1rem;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 3rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .menu-toggle {
-                display: flex;
-            }
-            
-            .hero {
-                margin-top: 60px;
-            }
-        }
-    </style>
-</head>
+    <!-- モバイル最適化用のスタイルをheadタグ内に追加 -->
+<style>
+/* ========================================
+   Mobile Optimized Styles
+======================================== */
+
+/* アクセスセクション最適化 */
+@media (max-width: 768px) {
+    /* アクセスセクションをコンパクトに */
+    #access .access-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    #access .access-info {
+        padding: 1.5rem !important;
+    }
+    
+    #access .info-item {
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    /* 営業時間テーブルを見やすく */
+    #access table {
+        font-size: 0.9rem;
+    }
+    
+    #access table td {
+        padding: 0.4rem 0.5rem !important;
+    }
+    
+    /* マップコンテナの高さ調整 */
+    #access .map-container {
+        height: 250px !important;
+        margin-top: 1rem;
+    }
+}
+
+/* コンセプトセクション最適化 */
+@media (max-width: 768px) {
+    #concept .concept-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    #concept .concept-text {
+        padding: 0 !important;
+    }
+    
+    #concept .concept-text h3 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    #concept .concept-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.8 !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
+    }
+    
+    #concept .concept-image {
+        height: 250px !important;
+        margin-top: 1rem;
+    }
+}
+
+/* 全体的なモバイル最適化 */
+@media (max-width: 768px) {
+    /* セクション余白を調整 */
+    section {
+        padding: 3rem 0 !important;
+    }
+    
+    /* タイトルサイズ調整 */
+    .section-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* コンテナのパディング調整 */
+    .container {
+        padding: 0 4% !important;
+    }
+    
+    /* フロアカード最適化 */
+    .floor-card {
+        padding: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .floor-number {
+        font-size: 2rem !important;
+    }
+    
+    .floor-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .floor-description {
+        font-size: 0.9rem !important;
+    }
+    
+    /* ギャラリー最適化 */
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .gallery-item {
+        height: 200px !important;
+    }
+    
+    /* ブランドリスト最適化 */
+    .brand-list {
+        gap: 1rem !important;
+    }
+    
+    .brand-item {
+        padding: 1rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        min-width: 120px;
+    }
+    
+    /* 予約カード最適化 */
+    .method-card {
+        padding: 1.5rem !important;
+    }
+    
+    .method-card h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    /* SNSリンク最適化 */
+    .sns-links {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .sns-links a {
+        width: 200px !important;
+        padding: 0.8rem 1.5rem !important;
+    }
+}
+
+/* 超小型モバイル用（iPhone SE等） */
+@media (max-width: 375px) {
+    .section-title {
+        font-size: 1.5rem !important;
+        letter-spacing: 0.1em !important;
+    }
+    
+    .hero-content svg {
+        width: 300px !important;
+        height: 90px !important;
+        viewBox: 0 0 300 90 !important;
+    }
+    
+    /* フォントサイズ微調整 */
+    body {
+        font-size: 14px;
+    }
+    
+    .tagline-wrapper {
+        font-size: 0.95rem !important;
+    }
+    
+    .brand-item {
+        min-width: 100px !important;
+        padding: 0.8rem 1.2rem !important;
+    }
+}
+
+/* 横向き表示対応 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 4rem 0;
+    }
+    
+    .hero-content svg {
+        width: 320px !important;
+        height: 100px !important;
+    }
+}
+
+/* アクセスセクション専用のコンパクト化 */
+.access-compact {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .access-compact .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .access-compact .info-grid-full {
+        grid-column: 1 / -1;
+    }
+    
+    /* 営業時間を2列表示に */
+    .hours-compact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .hours-compact .day-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.3rem 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+}
+
+/* ボタンとリンクの最適化 */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 0.8rem 2rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    a[href*="maps"] {
+        display: inline-block;
+        padding: 0.6rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* テキストの読みやすさ改善 */
+@media (max-width: 768px) {
+    p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* 画像の最適化 */
+@media (max-width: 768px) {
+    img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
+    .concept-image img,
+    .gallery-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* スクロール時のヘッダー固定改善 */
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 0 !important;
+    }
+    
+    .navbar {
+        padding: 0.5rem 4% !important;
+    }
+    
+    .logo-header svg {
+        width: 140px !important;
+        height: 40px !important;
+    }
+}
+
+/* 余白の最適化 */
+@media (max-width: 768px) {
+    /* 上下の余白を削減 */
+    .mb-3 { margin-bottom: 1.5rem !important; }
+    .mb-2 { margin-bottom: 1rem !important; }
+    .mt-3 { margin-top: 1.5rem !important; }
+    .mt-2 { margin-top: 1rem !important; }
+    
+    /* セクション間の余白 */
+    section + section {
+        margin-top: -1rem;
+    }
+}
+
+/* アニメーション軽量化（モバイル） */
+@media (max-width: 768px) {
+    /* パフォーマンス向上のためアニメーション簡略化 */
+    * {
+        animation-duration: 0.3s !important;
+    }
+    
+    .hero-bg-image img {
+        animation: none !important;
+    }
+    
+    .fade-in {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+</style>
 <body>
     <!-- Header -->
     <header id="header">
