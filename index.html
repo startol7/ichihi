@@ -511,6 +511,47 @@
             .section-title {
                 font-size: 1.8rem;
             }
+            
+            /* 公式LINEセクションのモバイル対応 */
+            .line-promotion-section {
+                padding: 2rem 0 !important;
+            }
+            
+            .line-promotion-section .container > div {
+                padding: 0 1rem;
+            }
+            
+            .line-promotion-section h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            /* コンセプトセクションのモバイル対応 */
+            .concept-content {
+                display: block !important;
+                gap: 0 !important;
+            }
+            
+            .concept-text {
+                margin-bottom: 2rem;
+            }
+            
+            .concept-image {
+                height: 250px !important;
+            }
+            
+            /* アクセスセクションのモバイル対応 */
+            .access-content {
+                display: block !important;
+                gap: 0 !important;
+            }
+            
+            .access-info {
+                margin-bottom: 2rem;
+            }
+            
+            .map-container {
+                height: 250px !important;
+            }
         }
         
         @media (max-width: 480px) {
@@ -528,19 +569,82 @@
             }
             
             .new-arrival {
-                padding: 3rem 0;
+                padding: 2rem 0 !important;
             }
             
             .new-arrival-title {
-                font-size: 1.5rem;
+                font-size: 1.3rem !important;
             }
             
-            .line-promotion-box {
-                padding: 1.5rem;
+            .new-arrival-info {
+                padding: 1rem !important;
             }
             
-            .line-promotion-title {
-                font-size: 1.2rem;
+            /* 公式LINEセクションのスマホ対応 */
+            .line-promotion-section div[style*="padding: 2rem 1.5rem"] {
+                padding: 1.5rem 1rem !important;
+            }
+            
+            .line-promotion-section h2 {
+                font-size: 1.3rem !important;
+                letter-spacing: 0 !important;
+            }
+            
+            .line-promotion-section div[style*="grid-template-columns: repeat(2, 1fr)"] {
+                grid-template-columns: 1fr !important;
+                gap: 0.5rem !important;
+            }
+            
+            .line-promotion-section a[style*="padding: 1rem 2.5rem"] {
+                padding: 0.9rem 2rem !important;
+                font-size: 1rem !important;
+            }
+            
+            /* フロアガイドのスマホ対応 */
+            .floor-guide .gallery-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .floor-guide .gallery-item img {
+                height: 200px !important;
+            }
+            
+            /* ブランドリストのスマホ対応 */
+            .brand-list {
+                gap: 0.8rem !important;
+            }
+            
+            .brand-list .brand-item {
+                padding: 1rem 1.5rem !important;
+                font-size: 0.85rem !important;
+                min-width: 45% !important;
+            }
+            
+            /* 予約セクションのスマホ対応 */
+            .reservation-methods {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .method-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* SNSセクションのスマホ対応 */
+            .sns-links {
+                flex-direction: column !important;
+                align-items: stretch !important;
+                padding: 0 1rem;
+            }
+            
+            .sns-links a {
+                width: 100% !important;
+                padding: 0.9rem 1.5rem !important;
+            }
+            
+            /* フッターのスマホ対応 */
+            .footer-info {
+                flex-direction: column !important;
+                gap: 0.5rem !important;
             }
         }
     </style>
@@ -604,73 +708,4 @@
         <div class="hero-bg-image">
             <img src="images/store-interior1.jpg.jpg" 
                  alt="イチヒロ店内" 
-                 onerror="this.style.background='linear-gradient(135deg, #1a1a1a, #333)'">
-        </div>
-        
-        <div class="hero-overlay"></div>
-        
-        <div class="hero-content">
-            <div class="logo-main">
-                <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="metallic" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
-                            <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.95" />
-                        </linearGradient>
-                        <filter id="elegantShadow">
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-                            <feOffset dx="0" dy="5"/>
-                            <feFlood flood-color="#000000" flood-opacity="0.3"/>
-                            <feComposite operator="over"/>
-                            <feComposite in="SourceGraphic"/>
-                        </filter>
-                    </defs>
-                    
-                    <rect x="30" y="30" width="340" height="60" 
-                          fill="none" 
-                          stroke="#d4af37" 
-                          stroke-width="0.5" 
-                          opacity="0.4"/>
-                    
-                    <rect x="20" y="35" width="360" height="50" 
-                          fill="url(#metallic)" 
-                          filter="url(#elegantShadow)"/>
-                    
-                    <polygon points="20,35 30,25 30,35" fill="#d4af37" opacity="0.6"/>
-                    <polygon points="380,35 370,25 370,35" fill="#d4af37" opacity="0.6"/>
-                    <polygon points="20,85 30,95 30,85" fill="#d4af37" opacity="0.6"/>
-                    <polygon points="380,85 370,95 370,85" fill="#d4af37" opacity="0.6"/>
-                    
-                    <text x="200" y="66" 
-                          font-family="Optima, Didot, Georgia, serif" 
-                          font-size="38" 
-                          font-weight="300" 
-                          fill="#1a1a1a" 
-                          text-anchor="middle" 
-                          letter-spacing="8">
-                        ICHIHIRO
-                    </text>
-                    
-                    <text x="200" y="102" 
-                          font-family="Futura, sans-serif" 
-                          font-size="8" 
-                          font-weight="300" 
-                          fill="#1a1a1a" 
-                          text-anchor="middle" 
-                          letter-spacing="5"
-                          opacity="0.6">
-                        BOUTIQUE MINO
-                    </text>
-                </svg>
-            </div>
-            
-            <div class="tagline-wrapper">
-                <p>美濃市の婦人服専門店</p>
-            </div>
-            
-            <a href="#line-promo" class="cta-button">
-                <span>最新情報をチェック</span>
-                <i class="fas fa-chevron-down"></i>
-            </a>
-  
+                 onerror="this.style.background='linear-gradient(135de
