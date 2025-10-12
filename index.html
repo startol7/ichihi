@@ -34,6 +34,12 @@
             color: #1a1a1a;
             overflow-x: hidden;
             line-height: 1.6;
+            max-width: 100%;
+        }
+        
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         
         /* Header */
@@ -781,10 +787,10 @@
     </section>
 
     <!-- LINE Promotion Section - 公式LINE登録促進（最上部） -->
-    <section id="line-promo" class="line-promotion-section" style="background: linear-gradient(135deg, #00b900 0%, #00c300 50%, #00d900 100%); padding: 3rem 0; position: relative; overflow: hidden;">
+    <section id="line-promo" class="line-promotion-section" style="background: linear-gradient(135deg, #00b900 0%, #00c300 50%, #00d900 100%); padding: 3rem 0; position: relative; overflow: hidden; max-width: 100%; margin: 0;">
         <!-- 装飾的な波形 -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; opacity: 0.1;">
-            <svg viewBox="0 0 1440 320" style="position: absolute; bottom: 0;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; opacity: 0.1; overflow: hidden;">
+            <svg viewBox="0 0 1440 320" style="position: absolute; bottom: 0; width: 100%; height: auto;">
                 <path fill="#ffffff" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,224C672,213,768,171,864,160C960,149,1056,171,1152,181.3C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
         </div>
@@ -803,6 +809,19 @@
                 10%, 30% { transform: rotate(-10deg); }
                 20%, 40% { transform: rotate(10deg); }
             }
+            
+            /* 横スクロール防止 */
+            section {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
         </style>
         
         <div class="container" style="position: relative; z-index: 2;">
@@ -811,7 +830,7 @@
                 <div style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 2rem 1.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.2); backdrop-filter: blur(10px); position: relative;">
                     
                     <!-- 特別バッジ -->
-                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(45deg, #FFD700, #FFA500); color: white; padding: 0.4rem 1.5rem; border-radius: 20px; font-weight: bold; font-size: 0.8rem; box-shadow: 0 3px 10px rgba(255,215,0,0.4);">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(45deg, #FFD700, #FFA500); color: white; padding: 0.4rem 1.5rem; border-radius: 20px; font-weight: bold; font-size: 0.8rem; box-shadow: 0 3px 10px rgba(255,215,0,0.4); white-space: nowrap;">
                         <i class="fas fa-star"></i> 期間限定特典 <i class="fas fa-star"></i>
                     </div>
                     
@@ -865,8 +884,8 @@
         </div>
         
         <!-- 下部の装飾的な波形 -->
-        <div style="position: absolute; bottom: -1px; left: 0; right: 0;">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div style="position: absolute; bottom: -1px; left: 0; right: 0; overflow: hidden;">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
                 <path d="M0 50L60 45C120 40 240 30 360 35C480 40 600 60 720 65C840 70 960 60 1080 55C1200 50 1320 50 1380 50L1440 50V100H0V50Z" fill="white"/>
             </svg>
         </div>
